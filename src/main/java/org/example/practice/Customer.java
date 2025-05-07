@@ -2,52 +2,45 @@ package org.example.practice;
 
 import java.util.Objects;
 
-public class Customer {
-    private long custId;
-    private String name;
-    private String emailId;
-    private String designation;
-    private long mobNo;
+public final class Customer {
+    private final long custId;
+    private final String name;
+    private final String emailId;
+    private final String designation;
+    private final long mobNo;
+
+    public Customer(long custId, String name, String emailId, String designation, long mobNo) {
+        this.custId = custId;
+        this.name = name;
+        this.emailId = emailId;
+        this.designation = designation;
+        this.mobNo = mobNo;
+    }
 
     public long getCustId() {
         return custId;
     }
 
-    public void setCustId(long custId) {
-        this.custId = custId;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmailId() {
         return emailId;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
 
     public String getDesignation() {
         return designation;
     }
 
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
 
     public long getMobNo() {
         return mobNo;
     }
 
-    public void setMobNo(long mobNo) {
-        this.mobNo = mobNo;
-    }
 
     @Override
     public boolean equals(Object o) {
